@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f4a5ea10c5.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="{{url_for('static',filename='index.js')}}"></script>
+    <title>Password Generator</title>
+</head>
+<body class="bg-blue-900 h-screen">
+    <nav class="h-[60px] flex justify-between py-3 px-2 border-b border-gray-400 text-white">
+        <div class="flex items-center">
+            <a class="text-xl font-semibold" href="">PassGen</a>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/eric-gichuri/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/ericgichuri"><i class="fa fa-github"></i></a>
+        </div>
+    </nav>
+    <div class="h-[85%] relative px-3">
+        <h1 class="text-3xl text-center mt-4 text-white">Password Generator</h1>
+        <div class="h-[80%] w-full flex flex-col items-center justify-start mt-3">
+            <form class="p-3 bg-gray-200 w-full md:w-1/2 opacity-90 rounded-md">
+                <div class="alert py-2 text-center bg-transparent">Provide password length</div>
+                <div class="mt-2">
+                    <input class="w-full outline-none border-0 text-base rounded-md py-3 px-2 focus:ring-2 focus:ring-blue-100" type="number" name="pass_length" min="8" placeholder="enter password length">
+                </div>
+                <div class="mt-3">
+                    <button class="w-full py-2 bg-blue-900 text-base text-white rounded-md">Generate password</button>
+                </div>
+            </form>
+            <div class="mt-4 p-3 w-full md:w-1/2 flex gap-3">
+                <input class="genpassword flex-1 text-lg text-white text-center font-semibold bg-transparent border-0 outline-none focus:ring-0">
+                <button class="bg-blue-800 text-white hidden button_copy px-2 py-2 text-sm rounded-md"><i class="fa fa-copy text-base mr-1"></i>Copy</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
